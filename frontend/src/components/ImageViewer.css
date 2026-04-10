@@ -1,0 +1,70 @@
+.image-viewer { display: flex; flex-direction: column; gap: 16px; transition: all .2s; }
+.image-viewer.zoom { position: fixed; inset: 16px; z-index: 200; overflow: auto; }
+
+.image-viewer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.image-viewer-title { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text2); }
+.image-viewer-tools { display: flex; align-items: center; gap: 8px; }
+
+.image-viewer-body {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-viewer-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text2);
+  font-size: 13px;
+}
+
+.spinner-ring {
+  width: 28px; height: 28px;
+  border: 2px solid var(--border2);
+  border-top-color: var(--teal);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+
+.viewer-img {
+  width: 100%;
+  display: block;
+  transition: opacity .3s;
+}
+
+/* streak 칩 */
+.streak-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.streak-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.streak-chip:hover, .streak-chip.active {
+  border-color: var(--teal-dim);
+  background: rgba(0,212,170,.06);
+}
+.chip-id { color: var(--teal); font-weight: 700; }
+.chip-vel { color: var(--text1); }

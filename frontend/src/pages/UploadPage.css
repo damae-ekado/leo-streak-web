@@ -1,0 +1,57 @@
+.upload-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+.upload-layout.has-result {
+  grid-template-columns: 400px 1fr;
+}
+.upload-left  { display: flex; flex-direction: column; }
+.upload-right { display: flex; flex-direction: column; gap: 16px; }
+
+/* 파일 탭 */
+.result-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.result-tab {
+  display: flex; align-items: center; gap: 7px;
+  padding: 7px 14px;
+  border-radius: var(--radius);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text1);
+  transition: all var(--transition);
+  max-width: 200px;
+}
+.result-tab:hover { border-color: var(--border2); color: var(--text0); }
+.result-tab.active {
+  border-color: var(--teal-dim);
+  color: var(--teal);
+  background: rgba(0,212,170,.06);
+}
+.tab-dot {
+  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+}
+.tab-name {
+  flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.tab-count {
+  background: var(--bg3);
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+.result-tab.active .tab-count {
+  background: rgba(0,212,170,.15);
+  color: var(--teal);
+}
+
+@media (max-width: 900px) {
+  .upload-layout.has-result { grid-template-columns: 1fr; }
+}

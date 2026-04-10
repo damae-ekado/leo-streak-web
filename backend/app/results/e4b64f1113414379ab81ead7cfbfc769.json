@@ -1,0 +1,37 @@
+{
+  "job_id": "e4b64f1113414379ab81ead7cfbfc769",
+  "filename": "e4b64f1113414379ab81ead7cfbfc769.fit",
+  "exposure_time": 3.0,
+  "streaks": [
+    {
+      "streak_id": 1,
+      "start_pixel": {
+        "x": 3767.0,
+        "y": 574.0
+      },
+      "end_pixel": {
+        "x": 3897.0,
+        "y": 535.0
+      },
+      "length_pixel": 135.72398461583714,
+      "start_sky": {
+        "ra": 121.77162245676635,
+        "dec": 35.40154923532106
+      },
+      "end_sky": {
+        "ra": 122.67620054668905,
+        "dec": 35.02452878729173
+      },
+      "mid_sky": {
+        "ra": 122.22591922382858,
+        "dec": 35.213492225104126
+      },
+      "angular_length_deg": 0.8296593319026928,
+      "angular_velocity": 0.27655311063423094,
+      "timestamp": "2026-04-02T12:48:20.375",
+      "t_center": "2026-04-02T12:48:21.875"
+    }
+  ],
+  "has_wcs": true,
+  "error": null
+}

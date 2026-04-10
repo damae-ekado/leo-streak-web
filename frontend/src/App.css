@@ -1,0 +1,6 @@
+/* App.css — 전역 레이아웃 보정만 담당, 디자인 토큰은 index.css */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
