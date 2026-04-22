@@ -7,5 +7,6 @@ astropy==6.1.2
 sep==1.4.0
 opencv-python-headless==4.10.0.84
 numpy==1.26.4
+scipy
 requests==2.32.3
 urllib3==2.2.3
