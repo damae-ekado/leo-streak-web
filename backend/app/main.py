@@ -25,6 +25,7 @@ app.add_middleware(
         "http://localhost:5173",   # Vite dev
         "http://localhost:3000",   # CRA / 기타
         "http://127.0.0.1:5173",
+        "https://leo-streak-web.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
