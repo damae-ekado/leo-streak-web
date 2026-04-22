@@ -1,0 +1,74 @@
+.orbit-layout { display: grid; grid-template-columns: 480px 1fr; gap: 28px; }
+.orbit-left  { display: flex; flex-direction: column; gap: 16px; }
+.orbit-right { display: flex; flex-direction: column; gap: 16px; }
+
+.orbit-section { display: flex; flex-direction: column; gap: 12px; }
+.orbit-section-title { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text2); }
+.orbit-section-header { display: flex; align-items: center; justify-content: space-between; }
+
+.site-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.orbit-field { display: flex; flex-direction: column; gap: 4px; }
+
+/* 관측 테이블 */
+.obs-table { display: flex; flex-direction: column; gap: 4px; }
+.obs-header { display: grid; grid-template-columns: 28px 1fr 90px 90px 32px;
+              gap: 6px; padding: 0 0 4px; border-bottom: 1px solid var(--border);
+              font-size: 10px; font-weight: 700; text-transform: uppercase;
+              letter-spacing: .06em; color: var(--text2); }
+.obs-row    { display: grid; grid-template-columns: 28px 1fr 90px 90px 32px;
+              gap: 6px; align-items: center; }
+.obs-num    { font-size: 11px; color: var(--text2); text-align: center; }
+.obs-input  { font-size: 12px; padding: 5px 8px; }
+.obs-num-input { text-align: right; }
+
+.orbit-error {
+  padding: 10px 14px; border-radius: var(--radius);
+  background: rgba(239,68,68,.08); border: 1px solid rgba(239,68,68,.2);
+  color: var(--red); font-size: 13px;
+}
+.orbit-run-btn { width: 100%; justify-content: center; padding: 13px; font-size: 15px; }
+
+/* TLE */
+.tle-block {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 14px 16px;
+  font-size: 12px; line-height: 1.8; color: var(--teal);
+  white-space: pre; overflow-x: auto;
+}
+.ext-link {
+  font-size: 12px; color: var(--blue); text-decoration: none;
+  padding: 4px 10px; border: 1px solid rgba(59,130,246,.3);
+  border-radius: var(--radius-sm); transition: all var(--transition);
+}
+.ext-link:hover { background: rgba(59,130,246,.08); text-decoration: none; }
+
+/* 궤도 요소 */
+.elements-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.element-item  { display: flex; flex-direction: column; gap: 3px; }
+.element-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text2); }
+.element-value { font-size: 14px; color: var(--text0); }
+.element-value.good { color: var(--teal); }
+.element-value.warn { color: var(--amber); }
+
+/* 정확도 */
+.rms-row { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 12px; }
+.rms-item { display: flex; flex-direction: column; gap: 3px; }
+
+/* 잔차 테이블 */
+.residual-table { display: flex; flex-direction: column; gap: 0; }
+.residual-header { display: grid; grid-template-columns: 80px 80px 80px 80px;
+                   gap: 8px; padding: 6px 8px; background: var(--bg2);
+                   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+                   font-size: 10px; font-weight: 700; text-transform: uppercase;
+                   letter-spacing: .06em; color: var(--text2); }
+.residual-row   { display: grid; grid-template-columns: 80px 80px 80px 80px;
+                  gap: 8px; padding: 5px 8px; font-size: 12px;
+                  border-bottom: 1px solid var(--border); }
+.residual-row:last-child { border-bottom: none; }
+.residual-row .good { color: var(--teal); }
+.residual-row .warn { color: var(--amber); }
+
+@media (max-width: 1000px) {
+  .orbit-layout { grid-template-columns: 1fr; }
+  .elements-grid { grid-template-columns: 1fr 1fr; }
+}

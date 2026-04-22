@@ -76,7 +76,7 @@ def upload(session_token: str, fits_path: str) -> int:
 
 # ── 완료 대기 ────────────────────────────────────────────────────────────────
 
-def wait_for_job(subid: int, timeout: int = 300) -> int:
+def wait_for_job(subid: int, timeout: int = 1000) -> int:
     """
     submission 이 완료될 때까지 폴링한다.
     Returns:

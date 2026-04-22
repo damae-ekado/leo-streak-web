@@ -1,0 +1,62 @@
+.param-panel { display: flex; flex-direction: column; gap: 0; padding: 0; overflow: hidden; }
+
+.param-panel-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; cursor: pointer; user-select: none;
+  transition: background var(--transition);
+}
+.param-panel-header:hover { background: var(--bg2); }
+.param-panel-title { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
+.param-toggle { color: var(--text2); font-size: 11px; }
+
+.param-body { padding: 16px 20px 20px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 16px; }
+
+/* 캘리브레이션 적용 바 */
+.calib-apply-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 14px; background: rgba(245,158,11,.08);
+  border: 1px solid rgba(245,158,11,.25); border-radius: var(--radius);
+}
+.calib-apply-desc { font-size: 12px; color: var(--amber); font-family: var(--font-mono); }
+
+/* 슬라이더 그리드 */
+.param-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; }
+
+.param-row { display: flex; flex-direction: column; gap: 4px; position: relative; }
+.param-row-top { display: flex; align-items: center; justify-content: space-between; }
+
+.param-label { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text2); }
+.param-number {
+  width: 70px; font-size: 12px; padding: 3px 6px;
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); color: var(--text0);
+  font-family: var(--font-mono); text-align: right;
+}
+
+.param-slider {
+  -webkit-appearance: none; width: 100%; height: 3px;
+  border-radius: 999px; background: var(--bg3);
+  outline: none; cursor: pointer;
+}
+.param-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 14px; height: 14px;
+  border-radius: 50%; background: var(--teal);
+  box-shadow: 0 0 6px rgba(0,212,170,.4); cursor: pointer;
+  transition: transform .1s;
+}
+.param-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+.param-tooltip {
+  position: absolute; bottom: calc(100% + 6px); left: 0; right: 0;
+  background: var(--bg0); border: 1px solid var(--border2);
+  border-radius: var(--radius-sm); padding: 6px 10px;
+  font-size: 11px; color: var(--text1); z-index: 10; line-height: 1.5;
+  pointer-events: none;
+}
+
+/* 액션 */
+.param-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+
+@media (max-width: 700px) {
+  .param-grid { grid-template-columns: 1fr; }
+}

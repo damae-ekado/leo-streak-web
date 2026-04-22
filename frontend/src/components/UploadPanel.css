@@ -61,3 +61,13 @@
 .upload-actions { display: flex; justify-content: flex-end; gap: 10px; }
 .upload-field   { display: flex; flex-direction: column; }
 .btn-xs { padding: 4px 10px; font-size: 12px; flex-shrink: 0; }
+
+/* 분류기 섹션 */
+.classifier-section { display: flex; flex-direction: column; gap: 8px; }
+.classifier-header  { display: flex; align-items: center; justify-content: space-between; }
+.classifier-info    { display: flex; align-items: center; gap: 10px; }
+.dropzone-sm {
+  padding: 14px 20px;
+  flex-direction: row;
+  justify-content: center;
+}
